@@ -16,7 +16,7 @@ const Home = () => {
           },
           particles: {
             number: {
-              value: 100,
+              value: 75,
               density: {
                 enable: true,
                 value_area: 700,
@@ -126,7 +126,7 @@ const Home = () => {
         }}
       />
       <div className="hero">
-        <h1>I'm Andrew Bernklau</h1>
+        <h1>I'm Andrew</h1>
         <h3>A Full Stack Developer</h3>
       </div>
     </section>
