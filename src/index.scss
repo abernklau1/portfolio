@@ -19,7 +19,7 @@
   $success-bkg: #dffdee;
   $danger-border: #f36161;
   $danger-bkg: #fddfdf;
-  $footer-separator: 8rem;
+  $footer-separator: 6rem;
   $header-font: "Space Mono", monospace;
   $body-font: "Roboto Mono", monospace;
 
@@ -46,6 +46,9 @@ ul {
 a {
   text-decoration: none;
   color: black;
+}
+
+a, button {
   cursor: pointer;
 }
 
@@ -87,9 +90,15 @@ a {
     }
     .nav-link {
       color: white;
+      text-transform: capitalize;
       &:active {
         opacity: .5;
       }
+    }
+    .bars {
+      background-color: transparent;
+      color: white;
+      border: none;
     }
   }
 }
@@ -105,7 +114,7 @@ a {
     position: absolute;
     color: white;
     font-size: 4vw;
-    top: 35%;
+    top: 25%;
     left: 35%;
     h3 {
       font-size: 2vw;

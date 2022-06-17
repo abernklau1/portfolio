@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import NavList from "./NavList";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
   return (
@@ -9,24 +9,11 @@ const Navbar = () => {
           <div className="logo"></div>
         </div>
         <div className="nav-list-container">
-          <ul className="nav-list">
-            <li className="nav-items">
-              <NavLink to="/" className="nav-link">
-                Home
-              </NavLink>
-            </li>
-            <li className="nav-items">
-              <NavLink to="/projects" className="nav-link">
-                Projects
-              </NavLink>
-            </li>
-            <li className="nav-items">
-              <NavLink to="/about" className="nav-link">
-                About
-              </NavLink>
-            </li>
-          </ul>
+          <NavList />
         </div>
+        <button className="bars">
+          <AiOutlineMenu size={40} />
+        </button>
       </nav>
     </section>
   );
