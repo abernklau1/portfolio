@@ -1,7 +1,7 @@
 import NavList from "./NavList";
-import { AiOutlineMenu } from "react-icons/ai";
+import HamburgerMenu from "./HamburgerMenu";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <section className="nav-container">
       <nav className="navbar">
@@ -11,12 +11,10 @@ const Navbar = () => {
         <div className="nav-list-container">
           <NavList />
         </div>
-        <button className="bars">
-          <AiOutlineMenu size={40} />
-        </button>
+        <HamburgerMenu />
       </nav>
     </section>
   );
 };
 
-export default Navbar;
+export default NavBar;

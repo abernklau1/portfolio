@@ -1,36 +1,44 @@
 import {
-  AiOutlineLinkedin,
-  AiOutlineMail,
-  AiOutlineCopyrightCircle,
-  AiFillGithub,
-  AiOutlineFileText,
-} from "react-icons/ai";
+  RiLinkedinFill,
+  RiMailLine,
+  RiCopyrightLine,
+  RiGithubLine,
+  RiFileList2Line,
+} from "react-icons/ri";
+
+import SocialIcon from "./SocialIcon";
 
 const Footer = () => {
   return (
     <section className="footer">
       <div className="icons">
-        <a
-          href="https://www.linkedin.com/in/andrew-bernklau-22737a21b/"
+        <SocialIcon
+          icon={<RiLinkedinFill />}
+          link="https://www.linkedin.com/in/andrew-bernklau-22737a21b/"
+          type="linkedin"
           title="LinkedIn"
-        >
-          <AiOutlineLinkedin size={36} />
-        </a>
-        <a href="/contact" title="Email">
-          <AiOutlineMail size={36} />
-        </a>
-        <a href="https://github.com/abernklau1" title="Github">
-          <AiFillGithub size={36} />
-        </a>
-        <a
-          href="https://docs.google.com/document/d/1JMGF2PX841CKjbVdCYA8x65hpAdeRwTuFjs2l9AZlCg"
+        />
+        <SocialIcon
+          icon={<RiMailLine />}
+          link="/contact"
+          type="mail"
+          title="Email"
+        />
+        <SocialIcon
+          icon={<RiGithubLine />}
+          link="https://github.com/abernklau1"
+          type="github"
+          title="GitHub"
+        />
+        <SocialIcon
+          icon={<RiFileList2Line />}
+          link="https://docs.google.com/document/d/1JMGF2PX841CKjbVdCYA8x65hpAdeRwTuFjs2l9AZlCg"
+          type="resume"
           title="Resume"
-        >
-          <AiOutlineFileText size={36} />
-        </a>
+        />
       </div>
       <div className="copyright">
-        <AiOutlineCopyrightCircle size={20} />
+        <RiCopyrightLine size={20} />
         <span>2022 Andrew Bernklau</span>
       </div>
     </section>
