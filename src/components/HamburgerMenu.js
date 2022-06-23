@@ -1,23 +1,21 @@
 import styled from "styled-components";
-import { useState } from "react";
 import DropDownMenu from "./DropDownMenu";
+import { useAppContext } from "../context/appContext";
 
 const Menu = ({ className }) => {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const handleClick = () => {
-    setShowMenu(!showMenu);
-  };
+  const { showDropDown, toggleDropDown } = useAppContext();
 
   return (
     <div
-      className={showMenu ? `menu ${className} activated` : `menu ${className}`}
+      className={
+        showDropDown ? `menu ${className} activated` : `menu ${className}`
+      }
     >
       <button
         className="nav-tgl"
         type="button"
         aria-label="hamburger-menu"
-        onClick={handleClick}
+        onClick={toggleDropDown}
       >
         <span aria-hidden="true"></span>
       </button>
@@ -28,9 +26,7 @@ const Menu = ({ className }) => {
 };
 
 const HamburgerMenu = styled(Menu)`
-  &.menu {
-    display: none;
-  }
+  display: none;
 
   .hidden {
     display: none;
@@ -41,8 +37,8 @@ const HamburgerMenu = styled(Menu)`
     cursor: pointer;
     position: fixed;
     z-index: 100;
-    right: 30px;
     top: 10px;
+    right: 30px;
     width: 50px;
     height: 50px;
     border: none;
