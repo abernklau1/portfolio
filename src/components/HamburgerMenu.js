@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import DropDownMenu from "./DropDownMenu";
 import { useState } from "react";
+import DropDownMenu from "./DropDownMenu";
 
 const Menu = ({ className }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -20,14 +20,19 @@ const Menu = ({ className }) => {
         onClick={handleClick}
       >
         <span aria-hidden="true"></span>
-        {/* <DropDownMenu /> */}
       </button>
+
+      <DropDownMenu className="hidden" />
     </div>
   );
 };
 
 const HamburgerMenu = styled(Menu)`
   &.menu {
+    display: none;
+  }
+
+  .hidden {
     display: none;
   }
 
@@ -105,6 +110,10 @@ const HamburgerMenu = styled(Menu)`
       &:before {
         transform: rotate(45deg);
       }
+    }
+
+    .hidden {
+      display: inline;
     }
   }
 

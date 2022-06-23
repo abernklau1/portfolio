@@ -1,20 +1,16 @@
 import styled from "styled-components";
 
-const Icon = ({ icon, link, type, title, className }) => {
+const Icon = ({ icon, className, type, title }) => {
   return (
-    <a
-      href={link}
-      target={link === "/contact" ? "_self" : "_blank"}
-      rel="noreferrer"
-      title={title}
-      className={`icon icon-${type} ${className}`}
-    >
+    <section className={`icon icon-${type} ${className}`} title={title}>
       {icon}
-    </a>
+    </section>
   );
 };
 
-const SocialIcon = styled(Icon)`
+const NavIcon = styled(Icon).attrs((props) => ({
+  color: "#666060",
+}))`
   &.icon {
     width: 40px;
     height: 40px;
@@ -32,7 +28,9 @@ const SocialIcon = styled(Icon)`
 
   &.icon:hover {
     outline-offset: 4px;
+    background-color: ${(props) => props.color};
+    outline-color: ${(props) => props.color};
   }
 `;
 
-export default SocialIcon;
+export default NavIcon;
