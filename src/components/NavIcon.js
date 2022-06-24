@@ -1,36 +1,31 @@
-import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+import {
+  RiHome4Line,
+  RiCodeLine,
+  RiUser3Line,
+  RiWechatLine,
+} from "react-icons/ri";
+import Icon from "./styles/Icon";
 
-const Icon = ({ icon, className, type, title }) => {
-  return (
-    <section className={`icon icon-${type} ${className}`} title={title}>
-      {icon}
-    </section>
-  );
+const icons = {
+  home: <RiHome4Line />,
+  projects: <RiCodeLine />,
+  about: <RiUser3Line />,
+  contact: <RiWechatLine />,
 };
 
-const NavIcon = styled(Icon).attrs((props) => ({
-  color: "#666060",
-}))`
-  &.icon {
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 18px;
-    color: #fff;
-    border-radius: 50%;
-    outline: 2px solid #fff;
-    transition-property: outline-offset, outline-color, background-color;
-    transition-duration: 0.25s;
-  }
-
-  &.icon:hover {
-    outline-offset: 4px;
-    background-color: ${(props) => props.color};
-    outline-color: ${(props) => props.color};
-  }
-`;
+const NavIcon = ({ to }) => {
+  return (
+    <li className="nav-items">
+      <NavLink to={to === "home" ? "/" : `/${to}`} className="nav-link">
+        {
+          <Icon color="#666060" title={to[0].toUpperCase() + to.substring(1)}>
+            {icons[to]}
+          </Icon>
+        }
+      </NavLink>
+    </li>
+  );
+};
 
 export default NavIcon;

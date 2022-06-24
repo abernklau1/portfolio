@@ -129,7 +129,7 @@ button {
 }
 
 a.active {
-  .icon {
+  & section {
     outline-offset: 4px;
     outline-color: $nav-icon;
     background-color: $nav-icon;

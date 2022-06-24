@@ -1,17 +1,40 @@
 import styled from "styled-components";
+import ProjectCard from "../components/ProjectCard";
 
-const projects = ({ className }) => {
-  return <section className={`projects ${className}`}>Projects</section>;
+const projects = {
+  webdev: [
+    {
+      title: "Banking App",
+      img: "home-page.png",
+      desc: "Very wonderful and beautifully made banking app",
+      link: "",
+    },
+  ],
+  datasci: [{}],
+  software: [{}],
+  games: [{}],
 };
 
-const Projects = styled(projects)`
-  /* background-image: radial-gradient(
-      circle farthest-corner at 10% 20%,
-      rgba(26, 26, 32, 1) 0%,
-      rgba(0, 0, 0, 1) 30%
-    ); */
+const Projects = ({ className }) => {
+  return (
+    <Wrapper>
+      <h2>Web Development</h2>
+      <div className="projects-container">
+        <ProjectCard />
+      </div>
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.section`
   background: black;
   height: 100vh;
+  color: #fff;
+  text-align: left;
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 export default Projects;
