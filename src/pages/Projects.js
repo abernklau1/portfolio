@@ -18,20 +18,22 @@ const projects = {
 const Projects = ({ className }) => {
   return (
     <Wrapper>
-      <h2>Web Development</h2>
-      <div className="projects-container">
-        <ProjectCard />
+      <div className="content-container">
+        <h2>Web Development</h2>
+        <div className="projects-container">
+          <ProjectCard />
+        </div>
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  background: black;
-  height: 100vh;
   color: #fff;
   text-align: left;
+  padding: 5rem 0 0 2rem;
   .projects-container {
+    margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
   }

@@ -19,7 +19,11 @@ const NavIcon = ({ to }) => {
     <li className="nav-items">
       <NavLink to={to === "home" ? "/" : `/${to}`} className="nav-link">
         {
-          <Icon color="#666060" title={to[0].toUpperCase() + to.substring(1)}>
+          <Icon
+            color="#666060"
+            title={to[0].toUpperCase() + to.substring(1)}
+            className={`icon-${to}`}
+          >
             {icons[to]}
           </Icon>
         }

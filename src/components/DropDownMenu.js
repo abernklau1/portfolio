@@ -38,9 +38,6 @@ const DropDownMenu = styled(DropDown)`
       animation: ${enter} 0.25s cubic-bezier(0.5, 0.05, 1, 0.5);
     }
 
-    .leave-home {
-      animation: ${enter} 0.25s cubic-bezier(0.5, 0.05, 1, 0.5) reverse;
-    }
     .icon-projects {
       animation: ${enter} 0.35s cubic-bezier(0.5, 0.05, 1, 0.5);
     }
