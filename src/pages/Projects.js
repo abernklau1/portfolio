@@ -7,7 +7,7 @@ const projects = {
       title: "Banking App",
       img: "home-page.png",
       desc: "Very wonderful and beautifully made banking app",
-      link: "",
+      link: "https://github.com/abernklau1/Banking-App",
     },
   ],
   datasci: [{}],

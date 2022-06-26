@@ -6,7 +6,7 @@ function ProjectCard({
   title = "Banking App",
   img = "home-page.png",
   desc = "Very wonderful and beautifully made banking app",
-  link = "",
+  link = "https://github.com/abernklau1/Banking-App",
 }) {
   return (
     <Wrapper>
@@ -32,6 +32,7 @@ const Wrapper = styled.section`
   border-radius: 5px;
   box-shadow: rgba(205, 205, 152, 0.25) 0px 4px 10px -2px,
     rgba(255, 255, 255, 0.3) 0px 2px 6px -2px;
+  transition: margin-left 0.5s;
 
   * {
     margin: 10px auto;
@@ -53,6 +54,12 @@ const Wrapper = styled.section`
   .rule {
     border-top: 5px dotted #929aab;
     width: 20%;
+  }
+
+  &:hover {
+    margin-left: 5px;
+    box-shadow: rgba(205, 205, 152, 0.25) 0px 4px 10px 0,
+      rgba(255, 255, 255, 0.3) 0px 2px 6px 0;
   }
 `;
 
