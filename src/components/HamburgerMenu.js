@@ -151,7 +151,7 @@ const HamburgerMenu = styled(Menu)`
         &:after,
         &:before {
           top: -1px;
-          left: 0px;
+          left: 2px;
           width: 26px;
         }
       }
@@ -161,7 +161,7 @@ const HamburgerMenu = styled(Menu)`
       &:after,
       &:before {
         top: -1px;
-        left: 3px;
+        left: 6px;
         width: 18px;
       }
       &:after {
