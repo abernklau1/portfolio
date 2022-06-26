@@ -9,12 +9,6 @@ const DropDown = ({ className }) => {
   );
 };
 
-const enter = keyframes`
-  0% { transform: translateX(100px);}
-  75% { transform: translateX(-25px);}
-  100% { transform: translateX(10px);}
-`;
-
 const DropDownMenu = styled(DropDown)`
   position: absolute;
   top: 50px;
@@ -28,26 +22,6 @@ const DropDownMenu = styled(DropDown)`
     justify-content: space-around;
     flex-direction: column;
     height: 15rem;
-
-    .icon {
-      position: absolute;
-      left: calc(6.5rem / 2 - 23px);
-    }
-
-    .icon-home {
-      animation: ${enter} 0.25s cubic-bezier(0.5, 0.05, 1, 0.5);
-    }
-
-    .icon-projects {
-      animation: ${enter} 0.35s cubic-bezier(0.5, 0.05, 1, 0.5);
-    }
-    .icon-about {
-      animation: ${enter} 0.45s cubic-bezier(0.5, 0.05, 1, 0.5);
-    }
-
-    .icon-contact {
-      animation: ${enter} 0.55s cubic-bezier(0.5, 0.05, 1, 0.5);
-    }
   }
 `;
 

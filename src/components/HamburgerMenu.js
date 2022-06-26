@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import DropDownMenu from "./DropDownMenu";
 import { useAppContext } from "../context/appContext";
 
@@ -20,16 +20,70 @@ const Menu = ({ className }) => {
         <span aria-hidden="true"></span>
       </button>
 
-      <DropDownMenu className="hidden" />
+      <DropDownMenu className={showDropDown ? "unhide" : "hide"} />
     </div>
   );
 };
 
+const enter = keyframes`
+  0% { transform: translateX(100px);}
+  75% { transform: translateX(-25px);}
+  100% { transform: translateX(10px);}
+`;
+
+const leave = keyframes`
+  0% { transform: translateX(10px);}
+  100% { transform: translateX(120px);}
+`;
+
 const HamburgerMenu = styled(Menu)`
   display: none;
 
-  .hidden {
-    display: none;
+  .hide {
+    a {
+      .icon-home {
+        transform: translateX(120px);
+        transition: transform 0.25s cubic-bezier(0.5, 0.05, 1, 0.5);
+      }
+
+      .icon-projects {
+        transform: translateX(120px);
+        transition: transform 0.4s cubic-bezier(0.5, 0.05, 1, 0.5);
+      }
+
+      .icon-about {
+        transform: translateX(120px);
+        transition: transform 0.55s cubic-bezier(0.5, 0.05, 1, 0.5);
+      }
+
+      .icon-contact {
+        transform: translateX(120px);
+        transition: transform 0.7s cubic-bezier(0.5, 0.05, 1, 0.5);
+      }
+    }
+  }
+
+  .unhide a {
+    .icon {
+      position: absolute;
+      left: calc(6.5rem / 2 - 23px);
+    }
+
+    .icon-home {
+      animation: ${enter} 0.25s cubic-bezier(0.5, 0.05, 1, 0.5);
+    }
+
+    .icon-projects {
+      animation: ${enter} 0.35s cubic-bezier(0.5, 0.05, 1, 0.5);
+    }
+
+    .icon-about {
+      animation: ${enter} 0.45s cubic-bezier(0.5, 0.05, 1, 0.5);
+    }
+
+    .icon-contact {
+      animation: ${enter} 0.55s cubic-bezier(0.5, 0.05, 1, 0.5);
+    }
   }
 
   .nav-tgl {
@@ -92,13 +146,23 @@ const HamburgerMenu = styled(Menu)`
   }
 
   &.menu.activated {
+    &:hover {
+      .nav-tgl span {
+        &:after,
+        &:before {
+          top: -1px;
+          left: 0px;
+          width: 26px;
+        }
+      }
+    }
     .nav-tgl span {
       height: 0;
       &:after,
       &:before {
         top: -1px;
-        left: 0px;
-        width: 26px;
+        left: 3px;
+        width: 18px;
       }
       &:after {
         transform: rotate(-45deg);
@@ -106,10 +170,6 @@ const HamburgerMenu = styled(Menu)`
       &:before {
         transform: rotate(45deg);
       }
-    }
-
-    .hidden {
-      display: inline;
     }
   }
 
