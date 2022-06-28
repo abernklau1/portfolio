@@ -31,11 +31,6 @@ const enter = keyframes`
   100% { transform: translateX(10px);}
 `;
 
-const leave = keyframes`
-  0% { transform: translateX(10px);}
-  100% { transform: translateX(120px);}
-`;
-
 const HamburgerMenu = styled(Menu)`
   display: none;
 
@@ -43,22 +38,22 @@ const HamburgerMenu = styled(Menu)`
     a {
       .icon-home {
         transform: translateX(120px);
-        transition: transform 0.25s cubic-bezier(0.5, 0.05, 1, 0.5);
+        transition: transform 0.15s cubic-bezier(0.5, 0.05, 1, 0.5);
       }
 
       .icon-projects {
         transform: translateX(120px);
-        transition: transform 0.4s cubic-bezier(0.5, 0.05, 1, 0.5);
+        transition: transform 0.3s cubic-bezier(0.5, 0.05, 1, 0.5);
       }
 
       .icon-about {
         transform: translateX(120px);
-        transition: transform 0.55s cubic-bezier(0.5, 0.05, 1, 0.5);
+        transition: transform 0.45s cubic-bezier(0.5, 0.05, 1, 0.5);
       }
 
       .icon-contact {
         transform: translateX(120px);
-        transition: transform 0.7s cubic-bezier(0.5, 0.05, 1, 0.5);
+        transition: transform 0.6s cubic-bezier(0.5, 0.05, 1, 0.5);
       }
     }
   }
