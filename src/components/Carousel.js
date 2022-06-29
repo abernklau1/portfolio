@@ -1,54 +1,58 @@
 import {
   RiArrowLeftSLine,
   RiArrowRightSLine,
-  RiCheckboxBlankCircleLine,
+  RiCheckboxBlankCircleFill,
 } from "react-icons/ri";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
+import { useRef } from "react";
+import { NavLink } from "react-router-dom";
 
-const Car = ({ images }) => {
-  let imgNum = 0;
-
-  const nextImg = () => {
-    let newImg = imgNum + 1;
-    if (newImg > 2) {
-      newImg = 0;
-    }
-  };
-
-  const prevImg = () => {
-    let newImg = imgNum - 1;
-    if (newImg < 0) {
-      newImg = 2;
-    }
-  };
+const Car = ({ images, className }) => {
+  const ref = useRef(null);
 
   return (
-    <section className="carousel" aria-label="Gallery">
+    <section className={className} aria-label="Gallery">
       <div className="arrow-container">
-        <button className="car-btn" onClick={prevImg}>
-          <RiArrowLeftSLine />
+        <button
+          className="car-btn"
+          onClick={() => {
+            ref.current.scrollBy({
+              left: -ref.current.clientWidth,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <RiArrowLeftSLine size={30} />
         </button>
-        <button className="car-btn" onClick={nextImg}>
-          <RiArrowRightSLine />
+        <button
+          className="car-btn"
+          onClick={() => {
+            ref.current.scrollBy({
+              left: ref.current.clientWidth,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <RiArrowRightSLine size={30} />
         </button>
       </div>
       <ul className="car-view">
         {images.map((img, index) => {
           return (
-            <li className="car_slide" key={index}>
+            <li className="car_slide" key={index} id={index}>
               <img src={img} alt="Project" />
             </li>
           );
         })}
       </ul>
       <aside className="car-nav">
-        <ul car-nav-list>
+        <ul className="car-nav-list">
           {images.map((img, index) => {
             return (
               <li className="car-nav-item" key={index}>
-                <button className="car-nav-btn">
-                  <RiCheckboxBlankCircleLine />
-                </button>
+                <NavLink className="car-nav-btn" to={`#${index}`}>
+                  <RiCheckboxBlankCircleFill />
+                </NavLink>
               </li>
             );
           })}
@@ -58,91 +62,50 @@ const Car = ({ images }) => {
   );
 };
 
-const toNext = keyframes`
-75% {
-    left: 0;
-}
-
-95% {
-    left: 100%
-}
-
-98% {
-    left: 100%
-}
-
-99% {
-    left: 0;
-}
-`;
-
-const toStart = keyframes`
-75% {
-    left: 0;
-}
-
-95% {
-    left: -300%
-}
-
-98% {
-    left: -300%
-}
-
-99% {
-    left: 0;
-}
-`;
-
-const snap = keyframes`
-96% {
-    scroll-span-align: center;
-}
-
-97% {
-    scroll-span-align: none;
-}
-
-99% {
-    scroll-span-align: none;
-}
-
-100% {
-    scroll-span-align: center;
-}
-`;
-
 const Carousel = styled(Car)`
-  ul,
-  li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  filter: drop-shadow(0 0 10px #0003);
+  perspective: 100px;
+
+  .arrow-container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 25%;
+
+    button {
+      border: none;
+      background: transparent;
+    }
   }
 
-  &.carousel {
+  .car-view {
+    display: flex;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+
+  .car-slide {
     position: relative;
-    padding-top: 75%;
-    filter: drop-shadow(0 0 10px #0003);
-    perspective: 100px;
+    flex: 0 0 100%;
+    width: 100%;
+  }
 
-    .car-view {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      display: flex;
-      overflow-x: scroll;
-      counter-reset: item;
-      scroll-behavior: smooth;
-      scroll-snap-type: x mandatory;
+  .car-nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    .car-nav-btn {
+      border: none;
+      background: transparent;
+      color: darkgray;
+      opacity: 0.7;
     }
-
-    .car-slide {
-      position: relative;
-      flex: 0 0 100%;
-      width: 100%;
-      counter-increment: item;
+    .active {
+      opacity: 1;
     }
   }
 `;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import LinkIcon from "./LinkIcon";
+import Carousel from "./Carousel";
 import { RiEyeFill } from "react-icons/ri";
 
 function ProjectCard({
@@ -10,7 +11,9 @@ function ProjectCard({
 }) {
   return (
     <Wrapper>
-      <img className="project-img" src={img} alt={title + " Image"} />
+      <div className="carousel-container">
+        <Carousel images={[img]} />
+      </div>
       <h4 className="project-title">{title}</h4>
       <div className="rule"></div>
       <p className="project-desc">{desc}</p>

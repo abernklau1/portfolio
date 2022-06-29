@@ -37,7 +37,6 @@ const SocialIconContainer = () => {
   return (
     <section className="icons">
       {Object.entries(socials).map((social, index) => {
-        console.log(social[1].color);
         return (
           <LinkIcon
             key={index}
