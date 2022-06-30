@@ -21,7 +21,7 @@ const datasci = [
       "images/datasci/fluacquisition/roc-comparison.png",
     ],
     desc: "NLP sentiment analysis of the Destiny 2 community on Twitter",
-    link: "https://github.com/abernklau1/Destiny2SentimentAnalysis",
+    link: "https://github.com/abernklau1/DeterminingFluVaccineAcquisition",
     techs: [<SiPython />, <SiPandas />, <SiScikitlearn />, "Matplotlib"],
   },
 ];
