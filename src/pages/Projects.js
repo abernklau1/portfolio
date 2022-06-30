@@ -1,28 +1,15 @@
 import styled from "styled-components";
-import ProjectCard from "../components/ProjectCard";
-
-const projects = {
-  webdev: [
-    {
-      title: "Banking App",
-      img: "home-page.png",
-      desc: "Very wonderful and beautifully made banking app",
-      link: "https://github.com/abernklau1/Banking-App",
-    },
-  ],
-  datasci: [{}],
-  software: [{}],
-  games: [{}],
-};
+import DataScience from "../components/DataScience";
+import WebDev from "../components/WebDev";
 
 const Projects = ({ className }) => {
   return (
     <Wrapper>
       <div className="content-container">
         <h2>Web Development</h2>
-        <div className="projects-container">
-          <ProjectCard />
-        </div>
+        <WebDev />
+        <h2>Data Science</h2>
+        <DataScience />
       </div>
     </Wrapper>
   );
@@ -36,6 +23,7 @@ const Wrapper = styled.section`
     margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
   }
 `;
 
