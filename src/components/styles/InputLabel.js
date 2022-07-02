@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 const InputLabel = styled.label.attrs((props) => ({
-  type: props.type || "text",
+  for: props.name,
   value: props.value,
-}))``;
+}))`
+  content: ${(props) => props.name};
+`;
 
 export default InputLabel;

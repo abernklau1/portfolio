@@ -33,6 +33,7 @@ body {
   position: relative;
   text-align: center;
   background-color: black;
+  color: white;
 }
 
 * {
@@ -150,6 +151,15 @@ a.active {
       font-size: 2vw;
     }
   }
+}
+
+// Contact
+
+.contact-form{
+  border: 2px solid #fff;
+  border-radius: 5px;
+  width: 300px;
+  margin: auto;
 }
 
 // Footer

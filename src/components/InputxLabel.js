@@ -1,7 +1,13 @@
-import React from "react";
+import FormInput from "./styles/FormInput";
+import InputLabel from "./styles/InputLabel";
 
-const InputxLabel = () => {
-  return <div>InputxLabel</div>;
+const InputxLabel = ({ name, value }) => {
+  return (
+    <section>
+      <InputLabel name="Email:" />
+      <FormInput />
+    </section>
+  );
 };
 
 export default InputxLabel;

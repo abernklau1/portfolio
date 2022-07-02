@@ -3,7 +3,7 @@ import InputxLabel from "./InputxLabel";
 
 const ContactForm = () => {
   return (
-    <section>
+    <section className="contact-form">
       <InputxLabel />
     </section>
   );
