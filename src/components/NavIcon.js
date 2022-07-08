@@ -6,6 +6,7 @@ import {
   RiWechatLine,
 } from "react-icons/ri";
 import Icon from "./styles/Icon";
+// import { useAppContext } from "../context/appContext";
 
 const icons = {
   home: <RiHome4Line />,
@@ -15,6 +16,8 @@ const icons = {
 };
 
 const NavIcon = ({ to }) => {
+  // const { showDropDown } = useAppContext();
+
   return (
     <li className="nav-items">
       <NavLink to={to === "home" ? "/" : `/${to}`} className="nav-link">
@@ -27,6 +30,9 @@ const NavIcon = ({ to }) => {
             {icons[to]}
           </Icon>
         }
+        {/* {!showDropDown && (
+          <p className="nav-title">{to[0].toUpperCase() + to.substring(1)}</p>
+        )} */}
       </NavLink>
     </li>
   );

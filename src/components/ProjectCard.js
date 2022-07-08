@@ -56,7 +56,7 @@ const Wrapper = styled.section`
   margin: 20px 0;
   box-shadow: rgba(205, 205, 152, 0.25) 0px 4px 10px -2px,
     rgba(255, 255, 255, 0.3) 0px 2px 6px -2px;
-  transition: margin-left 0.5s, box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
 
   * {
     margin: 0 auto;
@@ -74,12 +74,9 @@ const Wrapper = styled.section`
   }
 
   &:hover {
-    margin-left: 5px;
+    transform: translateX(5px);
     box-shadow: rgba(205, 205, 152, 0.25) 0px 4px 10px 0,
       rgba(255, 255, 255, 0.3) 0px 2px 6px 0;
-    + section {
-      margin-left: -5px;
-    }
   }
 
   .desc,

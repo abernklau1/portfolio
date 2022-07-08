@@ -34,34 +34,39 @@ const enter = keyframes`
 const HamburgerMenu = styled(Menu)`
   display: none;
 
-  .hide {
-    a {
-      .icon-home {
-        transform: translateX(120px);
-        transition: transform 0.15s cubic-bezier(0.5, 0.05, 1, 0.5);
-      }
+  .hide,
+  .unhide {
+    position: fixed;
+    top: 70px;
+  }
 
-      .icon-projects {
-        transform: translateX(120px);
-        transition: transform 0.3s cubic-bezier(0.5, 0.05, 1, 0.5);
-      }
+  .hide a {
+    .icon-home,
+    .icon-projects,
+    .icon-about,
+    .icon-contact {
+      transform: translateX(120px);
+    }
+    .icon-home {
+      transition: transform 0.15s cubic-bezier(0.5, 0.05, 1, 0.5);
+    }
 
-      .icon-about {
-        transform: translateX(120px);
-        transition: transform 0.45s cubic-bezier(0.5, 0.05, 1, 0.5);
-      }
+    .icon-projects {
+      transition: transform 0.3s cubic-bezier(0.5, 0.05, 1, 0.5);
+    }
 
-      .icon-contact {
-        transform: translateX(120px);
-        transition: transform 0.6s cubic-bezier(0.5, 0.05, 1, 0.5);
-      }
+    .icon-about {
+      transition: transform 0.45s cubic-bezier(0.5, 0.05, 1, 0.5);
+    }
+
+    .icon-contact {
+      transition: transform 0.6s cubic-bezier(0.5, 0.05, 1, 0.5);
     }
   }
 
   .unhide a {
     .icon {
       position: absolute;
-      left: calc(6.5rem / 2 - 23px);
     }
 
     .icon-home {
