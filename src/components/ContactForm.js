@@ -26,20 +26,22 @@ const ContactForm = () => {
   return (
     <section className="form-container">
       <form action="mailto:andrewbernklau98@gmail.com">
-        <InputLabel for="name">Name:</InputLabel>
+        <InputLabel for="name">Name</InputLabel>
         <FormInput name="name" value={values.name} onChange={handleChange} />
-        <InputLabel for="email">Email:</InputLabel>
+        <InputLabel for="email">Email</InputLabel>
         <FormInput name="email" value={values.email} onChange={handleChange} />
-        <InputLabel for="subject">Subject:</InputLabel>
+        <InputLabel for="subject">Subject</InputLabel>
         <FormInput
           name="subject"
           value={values.subject}
           onChange={handleChange}
         />
-        <InputLabel for="message">Message:</InputLabel>
-        <textarea name="message" value={values.message} onChange={handleChange}>
-          Type here...
-        </textarea>
+        <InputLabel for="message">Message</InputLabel>
+        <textarea
+          name="message"
+          value={values.message}
+          onChange={handleChange}
+        ></textarea>
         <button type="submit" onClick={handleSubmit}>
           Submit
         </button>

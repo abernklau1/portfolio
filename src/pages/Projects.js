@@ -18,7 +18,7 @@ const Projects = ({ className }) => {
 const Wrapper = styled.section`
   color: #fff;
   text-align: left;
-  padding: 5rem 0 0 2rem;
+  padding-left: 2rem;
   .projects-container {
     margin: 10px 0;
     display: flex;
