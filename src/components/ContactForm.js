@@ -29,7 +29,12 @@ const ContactForm = () => {
         <InputLabel for="name">Name</InputLabel>
         <FormInput name="name" value={values.name} onChange={handleChange} />
         <InputLabel for="email">Email</InputLabel>
-        <FormInput name="email" value={values.email} onChange={handleChange} />
+        <FormInput
+          name="email"
+          value={values.email}
+          type="email"
+          onChange={handleChange}
+        />
         <InputLabel for="subject">Subject</InputLabel>
         <FormInput
           name="subject"

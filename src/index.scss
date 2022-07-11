@@ -54,7 +54,8 @@ h6 {
 p,
 a,
 span,
-div {
+div, 
+button {
   font-family: $body-font;
 }
 
@@ -166,18 +167,36 @@ a.active {
 }
 
 // Contact
-
+.contact-head {
+  width: fit-content;
+  margin: auto;
+  h2, h3 {
+    text-align: left;
+  }
+}
 .form-container {
   border-radius: 5px;
-  width: 300px;
-  margin: auto;
+  width: 500px;
+  margin: 2rem auto;
   text-align: left;
-  padding: 0 0 .5rem 1rem;
+  padding: .3rem 0 .5rem 1rem;
   box-shadow: $box-shadow-1;
-
   label {
     display: block;
     margin: .5rem 0 .1rem;
+  }
+
+  input {
+    width: 15rem;
+  }
+
+  input, button, textarea {
+    background-color: #b3b3b3;
+  }
+
+  textarea {
+    width: 20rem;
+    height: 5rem;
   }
 
   button {
