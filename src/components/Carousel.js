@@ -99,6 +99,7 @@ const Carousel = styled(Car)`
     top: 35%;
 
     button {
+      color: #7300b3;
       margin: 0;
       opacity: 0.3;
       border: none;
@@ -127,7 +128,7 @@ const Carousel = styled(Car)`
     .car-nav-btn {
       border: none;
       background: transparent;
-      color: darkgray;
+      color: #7300b3;
       opacity: 0.5;
       margin: 0 5px;
       font-size: 10px;

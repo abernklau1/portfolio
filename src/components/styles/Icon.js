@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Icon = styled.section.attrs((props) => ({
-  color: props.color || "#666060",
+  color: props.color || "#620099",
   iconColor: props.color === "white" ? "black" : "white",
 }))`
   width: 40px;
@@ -11,9 +11,9 @@ const Icon = styled.section.attrs((props) => ({
   justify-content: center;
   text-decoration: none;
   font-size: 18px;
-  color: #fff;
+  color: #b3b3b3;
   border-radius: 50%;
-  outline: 2px solid #fff;
+  outline: 2px solid #b3b3b3;
   transition-property: outline-offset, outline-color, background-color;
   transition-duration: 0.25s;
 

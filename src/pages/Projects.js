@@ -16,7 +16,6 @@ const Projects = ({ className }) => {
 };
 
 const Wrapper = styled.section`
-  color: #fff;
   text-align: left;
   padding-left: 2rem;
   .projects-container {
@@ -24,6 +23,11 @@ const Wrapper = styled.section`
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+  }
+
+  @media (max-width: 650px) {
+    margin: auto;
+    text-align: center;
   }
 `;
 

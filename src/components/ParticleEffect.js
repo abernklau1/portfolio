@@ -28,7 +28,7 @@ const ParticleEffect = () => {
             type: "circle",
             stroke: {
               width: 0,
-              color: "#000",
+              color: "#191919",
             },
             polygon: {
               nb_sides: 5,
@@ -119,7 +119,7 @@ const ParticleEffect = () => {
         fps_limit: 60,
         background: {
           color: {
-            value: "#000",
+            value: "#111111",
           },
         },
       }}

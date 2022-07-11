@@ -37,19 +37,14 @@ function ProjectCard({ title, images, desc, link, techs }) {
             );
           })}
         </div>
-        <LinkIcon
-          icon={<RiEyeFill />}
-          link={link}
-          title="View Project"
-          color="white"
-        />
+        <LinkIcon icon={<RiEyeFill />} link={link} title="View Project" />
       </div>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.section`
-  color: white;
+  color: #b3b3b3;
   width: 23rem;
   text-align: left;
   border-radius: 0 0 5px 5px;
@@ -69,7 +64,7 @@ const Wrapper = styled.section`
   }
 
   .rule {
-    border-top: 5px dotted #929aab;
+    border-top: 5px dotted #620099;
     width: 20%;
   }
 
@@ -98,6 +93,10 @@ const Wrapper = styled.section`
     .tech {
       margin: 0 3px;
     }
+  }
+
+  @media (max-width: 650px) {
+    margin: auto;
   }
 `;
 
