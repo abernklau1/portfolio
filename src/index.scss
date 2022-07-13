@@ -55,7 +55,9 @@ p,
 a,
 span,
 div, 
-button {
+button,
+input,
+textarea {
   font-family: $body-font;
 }
 
@@ -186,17 +188,28 @@ a.active {
     margin: .5rem 0 .1rem;
   }
 
-  input {
-    width: 15rem;
+  input, textarea {
+    padding-left: .3rem;
+    &:focus {
+        box-shadow:
+          rgba(245, 218, 191, 0.35) 0px -2px 6px 0px;
+      }
   }
 
   input, button, textarea {
+    border: none;
+    outline: none;
     background-color: #b3b3b3;
+    border-radius: 3px;
   }
 
   textarea {
     width: 20rem;
     height: 5rem;
+    padding-top: .3rem;
+    padding-right: .3rem;
+    max-width: 90%;
+    max-height: 300px;
   }
 
   button {
@@ -204,8 +217,9 @@ a.active {
     margin: .5rem 0;
     width: 3.5rem;
     height: 2rem;
+    border: none;
     &:hover {
-      box-shadow: rgba(205, 205, 137, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(245, 218, 191, 0.35) 0px -2px 6px 0px;;
+      box-shadow: rgba(205, 205, 137, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(245, 218, 191, 0.35) 0px -2px 6px 0px;
     }
     &:active {
       box-shadow: none;
@@ -257,11 +271,8 @@ a.active {
 }
 
 @media (max-width: 1050px) {
-  .nav-list-container {
-    display: none;
-  }
 
-  .nav-container .navbar .nav-link .nav-title {
+  .nav-container .navbar .nav-link .nav-title, .nav-list-container{
     display: none;
   }
 }
