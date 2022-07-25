@@ -191,8 +191,7 @@ a.active {
   input, textarea {
     padding-left: .3rem;
     &:focus {
-        box-shadow:
-          rgba(245, 218, 191, 0.35) 0px -2px 6px 0px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       }
   }
 
@@ -219,7 +218,7 @@ a.active {
     height: 2rem;
     border: none;
     &:hover {
-      box-shadow: rgba(205, 205, 137, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(245, 218, 191, 0.35) 0px -2px 6px 0px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
     &:active {
       box-shadow: none;
