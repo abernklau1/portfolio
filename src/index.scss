@@ -226,6 +226,13 @@ a.active {
   }
 }
 
+// About
+
+.about {
+  text-align: left;
+  margin-left: 30px;
+}
+
 // Footer
 
 .footer {
@@ -269,9 +276,9 @@ a.active {
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1450px) {
 
-  .nav-container .navbar .nav-link .nav-title, .nav-list-container{
+  .nav-container .navbar .nav-link .nav-title, .nav-list-container {
     display: none;
   }
 }

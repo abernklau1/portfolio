@@ -173,7 +173,7 @@ const HamburgerMenu = styled(Menu)`
     }
   }
 
-  @media (max-width: 1050px) {
+  @media (max-width: 1450px) {
     &.menu {
       display: inline;
     }
