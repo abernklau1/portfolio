@@ -176,6 +176,7 @@ a.active {
     text-align: left;
   }
 }
+
 .form-container {
   border-radius: 5px;
   width: 500px;
@@ -200,6 +201,11 @@ a.active {
     outline: none;
     background-color: #b3b3b3;
     border-radius: 3px;
+
+    // Attempt to remove the change to the input background that occurs when autofilling on Google
+    // &:-webkit-autofill {
+    //   background-color: #b3b3b3;
+    // }
   }
 
   textarea {
@@ -231,6 +237,14 @@ a.active {
 .about {
   text-align: left;
   margin-left: 30px;
+
+  div {
+    margin: 20px 0;
+  }
+
+  a:hover {
+    opacity: .7;
+  }
 }
 
 // Footer
