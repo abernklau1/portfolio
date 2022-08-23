@@ -34,6 +34,8 @@ const ContactForm = () => {
         {/* Disable Captcha */}
         <input type="hidden" name="_captcha" value="false" />
 
+        <input type="hidden" name="_next" value="" />
+
         <InputLabel for="name">Full Name</InputLabel>
         <FormInput name="name" value={values.name} onChange={handleChange} />
         <InputLabel for="email">Email</InputLabel>
