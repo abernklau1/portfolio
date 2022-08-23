@@ -6,7 +6,7 @@ const initialValues = {
   name: "",
   email: "",
   subject: "",
-  message: "",
+  comments: "",
 };
 
 const ContactForm = () => {
@@ -19,14 +19,22 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  const handleResetClick = () => {
+    setValues(initialValues);
+  }
+
 
   return (
     <section className="form-container">
-      <form action="mailto:andrewbernklau98@gmail.com">
-        <InputLabel for="name">Name</InputLabel>
+      <form action="https://formsubmit.co/andrewbernklau98@gmail.com" method="post">
+
+        {/* Honeypot */}
+        <input type="text" name="_honey" style={{ display: "none" }} />
+
+        {/* Disable Captcha */}
+        <input type="hidden" name="_captcha" value="false" />
+
+        <InputLabel for="name">Full Name</InputLabel>
         <FormInput name="name" value={values.name} onChange={handleChange} />
         <InputLabel for="email">Email</InputLabel>
         <FormInput
@@ -41,15 +49,14 @@ const ContactForm = () => {
           value={values.subject}
           onChange={handleChange}
         />
-        <InputLabel for="message">Message</InputLabel>
+        <InputLabel for="comments">Comments</InputLabel>
         <textarea
-          name="message"
-          value={values.message}
+          name="comments"
+          value={values.comments}
           onChange={handleChange}
         ></textarea>
-        <button type="submit" onClick={handleSubmit}>
-          Submit
-        </button>
+        <input type="submit" name="submit" value="Send" />
+        <input type="reset" name="reset" value="Clear Form" onClick={handleResetClick} />
       </form>
     </section>
   );
