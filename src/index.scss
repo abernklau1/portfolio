@@ -219,6 +219,8 @@ a.active {
   }
 
   input[type=submit], input[type=reset] {
+    color: black;
+    font-weight: bold;
     display: inline-block;
     margin: .5rem 1rem 0 0;
     padding-left: 0;
@@ -252,8 +254,6 @@ a.active {
     opacity: .7;
   }
 }
-
-// Error
 
 // Footer
 
@@ -298,9 +298,41 @@ a.active {
   }
 }
 
+// Media Queries
+
 @media (max-width: 1450px) {
 
   .nav-container .navbar .nav-link .nav-title, .nav-list-container {
     display: none;
   }
 }
+
+@media (max-width: 650px) {
+  .about {
+    text-align: center;
+  }
+
+  .contact-head {
+    h2, h3{
+      text-align: center;
+      margin: 0 15px;
+    }
+  }
+
+  .form-container {
+    width: 350px;
+    text-align: center;
+    padding: 10px 0;
+
+    textarea {
+      margin: auto;
+    }
+
+    input[type=submit] {
+      margin: 0 20px;
+    }
+  }
+
+}
+
+

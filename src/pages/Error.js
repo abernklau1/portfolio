@@ -260,6 +260,10 @@ const Wrapper = styled.section`
 
   a {
     color: #6c63ff;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 `;
 
