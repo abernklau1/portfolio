@@ -12,7 +12,7 @@ function App() {
           <Route path="/portfolio/about" element={<About />} />
           <Route path="/portfolio/contact" element={<Contact />} />
         </Route>
-        <Route path="*" element={<Error />} />
+        <Route path="/portfolio/*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   );
