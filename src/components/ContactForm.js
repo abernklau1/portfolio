@@ -21,20 +21,25 @@ const ContactForm = () => {
 
   const handleResetClick = () => {
     setValues(initialValues);
-  }
-
+  };
 
   return (
     <section className="form-container">
-      <form action="https://formsubmit.co/andrewbernklau98@gmail.com" method="post">
-
+      <form
+        action="https://formsubmit.co/andrewbernklau@hotmail.com"
+        method="post"
+      >
         {/* Honeypot */}
         <input type="text" name="_honey" style={{ display: "none" }} />
 
         {/* Disable Captcha */}
         <input type="hidden" name="_captcha" value="false" />
 
-        <input type="hidden" name="_next" value="" />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://abernklau1.github.io/portfolio/success"
+        />
 
         <InputLabel for="name">Full Name</InputLabel>
         <FormInput name="name" value={values.name} onChange={handleChange} />
@@ -58,7 +63,12 @@ const ContactForm = () => {
           onChange={handleChange}
         ></textarea>
         <input type="submit" name="submit" value="Send" />
-        <input type="reset" name="reset" value="Clear Form" onClick={handleResetClick} />
+        <input
+          type="reset"
+          name="reset"
+          value="Clear Form"
+          onClick={handleResetClick}
+        />
       </form>
     </section>
   );
