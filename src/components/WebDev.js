@@ -5,9 +5,9 @@ const webdev = [
   {
     title: "Banking App",
     images: [
-      "/images/webdev/bankapp/bank-app-home.png",
-      "/images/webdev/bankapp/bank-app-register.png",
-      "/images/webdev/bankapp/bank-app-accounts.png",
+      "images/webdev/bankapp/bank-app-home.png",
+      "images/webdev/bankapp/bank-app-register.png",
+      "images/webdev/bankapp/bank-app-accounts.png",
     ],
     desc: "A banking application that allows users to create a user account with a main banking account, and loan accounts; with simple CRUD operations to create accounts, read balances, update account balances, and delete accounts.",
     link: "https://github.com/abernklau1/Banking-App",

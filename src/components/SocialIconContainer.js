@@ -15,7 +15,7 @@ const socials = {
   },
   mail: {
     icon: <RiMailLine />,
-    link: "/contact",
+    link: "portfolio/contact",
     color: "#ff4f4f",
     title: "Email",
   },
