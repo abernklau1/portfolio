@@ -35,6 +35,7 @@ const ContactForm = () => {
         {/* Disable Captcha */}
         <input type="hidden" name="_captcha" value="false" />
 
+        {/* Success page navigation*/}
         <input
           type="hidden"
           name="_next"
@@ -42,13 +43,14 @@ const ContactForm = () => {
         />
 
         <InputLabel for="name">Full Name</InputLabel>
-        <FormInput name="name" value={values.name} onChange={handleChange} />
+        <FormInput name="name" value={values.name} onChange={handleChange} required />
         <InputLabel for="email">Email</InputLabel>
         <FormInput
           name="email"
           value={values.email}
           type="email"
           onChange={handleChange}
+          required
         />
         <InputLabel for="subject">Subject</InputLabel>
         <FormInput
@@ -61,6 +63,7 @@ const ContactForm = () => {
           name="comments"
           value={values.comments}
           onChange={handleChange}
+          required
         ></textarea>
         <input type="submit" name="submit" value="Send" />
         <input
